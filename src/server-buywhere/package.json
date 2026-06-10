@@ -1,0 +1,47 @@
+{
+  "name": "@mcp-get-community/server-buywhere",
+  "version": "0.1.0",
+  "description": "BuyWhere MCP server for AI agents — search and compare 11M+ products across Singapore, SEA, and US markets via Model Context Protocol",
+  "main": "dist/index.js",
+  "type": "module",
+  "private": false,
+  "bin": {
+    "@mcp-get-community/server-buywhere": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "author": "Michael Latman <https://michaellatman.com>",
+  "homepage": "https://github.com/BuyWhere/buywhere-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcp-get/community-servers.git",
+    "directory": "src/server-buywhere"
+  },
+  "bugs": {
+    "url": "https://github.com/mcp-get/community-servers/issues"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.0.1",
+    "node-fetch": "^3.3.0",
+    "zod": "^3.22.4",
+    "zod-to-json-schema": "^3.22.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "ts-node": "^10.9.0"
+  }
+}
